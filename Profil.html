@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Card</title>
+  <!-- Hubungkan dengan file CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Hubungkan dengan file JavaScript Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: white;
+      font-family: Arial, Helvetica, sans-serif
+    }
+
+    .container {
+      max-width: 25rem;
+      text-align: center;
+      background-color:grey;
+    }
+
+    .card-img-top {
+      display: block;
+      margin: 0 auto;
+      max-width: 35%;
+      background-color: bisque;
+      border: 1px solid black
+    }
+
+    .contact-container {
+      display: none;
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid blue;
+      border-radius: 5px;
+       font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+  <script>
+    function toggleContactContainer() {
+      var contactContainer = document.getElementById('contact-container');
+      contactContainer.style.display = contactContainer.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="card">
+      <!-- Gambar profil bisa diganti dengan gambar kamu -->
+      <a href="image.png.jpg" target="_blank">
+        <img src="image.png.jpg" class="card-img-top" alt="Gambar Profil">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">BIODATA</h5>
+        <!-- Menggunakan flexbox untuk menengahkan paragraf -->
+        <p class="card-text" style="display: flex; justify-content: center;">NAMA: LUTHFIANA AZZALEA AFIFAH</p>
+        <p class="card-text" style="display: flex; justify-content: center;">NIM: L200220052.</p>
+        <button class="btn btn-primary" onclick="toggleContactContainer()">Get in Touch</button>
+        <!-- Kontainer kontak yang akan muncul ketika tombol diklik -->
+        <div id="contact-container" class="contact-container">
+          <a href="https://instagram.com/luthfianazzalea?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="bi bi-instagram"></i> Instagram</a><br>
+          <p class="card-text" style="display: flex; justify-content: center;">ABOUT ME:</p>
+          <p class="card-text" style="display: flex; justify-content: left;">ALAMAT : Lalung,Karanganyar.</p>
+          <p class="card-text" style="display: flex; justify-content: left;">EMAIL : Luthfiana722@gmail.com.</p>
+          <p class="card-text" style="display: flex; justify-content: left;">JURUSAN : Teknik Informatika.</p>
+          <p class="card-text" style="display: flex; justify-content: left;">UNIVERSITAS : Universitas Muhammadiyah Surakarta.</p>
+          <p class="card-text" style="display: flex; justify-content: left;">UKM : FOSTI (Forum Open Source Teknik Informatika).</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
